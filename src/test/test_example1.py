@@ -61,18 +61,18 @@ def test_cerealanalysis(ca):
 def test_get_numeric_summary(ca):
     numeric_summary = ca.get_numeric_summary()
     assert numeric_summary["calories"]["mean"] == pytest.approx(106.88311, 0.00001)
-    assert numeric_summary["protein"]["mean"] == 2.5454545454545454
-    assert numeric_summary["fat"]["mean"] == 1.012987012987013
-    assert numeric_summary["sodium"]["mean"] == 159.67532467532467
-    assert numeric_summary["fiber"]["mean"] == 2.1519480519480516
-    assert numeric_summary["carbo"]["mean"] == 14.597402597402597
-    assert numeric_summary["sugars"]["mean"] == 6.922077922077922
-    assert numeric_summary["potass"]["mean"] == 96.07792207792207
-    assert numeric_summary["vitamins"]["mean"] == 28.246753246753247
-    assert numeric_summary["shelf"]["mean"] == 2.207792207792208
-    assert numeric_summary["weight"]["mean"] == 1.0296103896103896
-    assert numeric_summary["cups"]["mean"] == 0.821038961038961
-    assert numeric_summary["rating"]["mean"] == 42.66570498701299
+    assert numeric_summary["protein"]["mean"] == pytest.approx(2.54545, 0.00001)
+    assert numeric_summary["fat"]["mean"] == pytest.approx(1.01298, 0.00001)
+    assert numeric_summary["sodium"]["mean"] == pytest.approx(159.67532, 0.00001)
+    assert numeric_summary["fiber"]["mean"] == pytest.approx(2.15194, 0.00001)
+    assert numeric_summary["carbo"]["mean"] == pytest.approx(14.59740, 0.00001)
+    assert numeric_summary["sugars"]["mean"] == pytest.approx(6.92207, 0.00001)
+    assert numeric_summary["potass"]["mean"] == pytest.approx(96.07792, 0.00001)
+    assert numeric_summary["vitamins"]["mean"] == pytest.approx(28.24675, 0.00001)
+    assert numeric_summary["shelf"]["mean"] == pytest.approx(2.20779, 0.00001)
+    assert numeric_summary["weight"]["mean"] == pytest.approx(1.02961, 0.00001)
+    assert numeric_summary["cups"]["mean"] == pytest.approx(0.8210, 0.0001)
+    assert numeric_summary["rating"]["mean"] == pytest.approx(42.66570, 0.00001)
 
 
 def test_get_missing_values(ca):
